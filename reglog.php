@@ -2,9 +2,22 @@
 
 // Não permitir que entre nessa tela se ja estiver logado
 
+// Criação de conta ou login do usuario 
 if (!empty($_SESSION["id"])) {
     header("Location: audote.php");
 }
+
+
+// No momento que o usuário apertar o botão de login, esse código será executado
+// ele pega as variáveis de email e senha e faz uma pesquisa no banco de dados
+// seleciona todos os usuarios onde o email for igual ao que o usuario colocou no campo e coloca a tabela com os valores na variavel $result (resultado)
+// coloca na variavel $row (linha) os dados de cada linha
+
+// verifica se a variavel resultado tem algum valor dentro dela, e se tiver ele verifica se a senha digitada é igual a senha na tabelae depois armazena os seguintes dados
+// o id do usuario que tiver o email igual ao campo
+// o login como verdadeiro
+// e ai redireciona o usuario para a pagina audote.php
+// esse código está aqui em cima porque quando usamos o header(location: ); ele precisa estar antes de qualquer html, se não ele dá erro
 
 if (isset($_POST["logsubmit"])) {
     $logemail = $_POST["logemail"];
@@ -39,6 +52,7 @@ if (isset($_POST["logsubmit"])) {
 
     <header>
         <nav>
+            <!-- Cabeçalho--> 
             <ul class="nav-links">
                 <li>
                     <a href="#"><img src="./src/img/logo.jpg" alt=""></a>
@@ -56,7 +70,7 @@ if (isset($_POST["logsubmit"])) {
             </div>
         </nav>
     </header>
-
+                                <!-- Codigo do Form--> 
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
@@ -171,6 +185,16 @@ if (isset($_POST["regsubmit"])) {
 }
 
 // Formulário de Login
+
+// No momento que o usuário apertar o botão de login, esse código será executado
+// ele pega as variáveis de email e senha e faz uma pesquisa no banco de dados
+// seleciona todos os usuarios onde o email for igual ao que o usuario colocou no campo e coloca a tabela com os valores na variavel $result (resultado)
+// coloca na variavel $row (linha) os dados de cada linha
+
+// verifica se a variavel resultado tem algum valor dentro dela, e se tiver ele verifica se a senha digitada é igual a senha na tabelae depois armazena os seguintes dados
+// o id do usuario que tiver o email igual ao campo
+// o login como verdadeiro
+// e ai redireciona o usuario para a pagina audote.php
 if (isset($_POST["logsubmit"])) {
     $logemail = $_POST["logemail"];
     $logsenha = $_POST["logsenha"];

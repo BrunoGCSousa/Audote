@@ -1,3 +1,4 @@
+<!--Página principal -->
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,6 +15,7 @@
     <body>
 
         <header>
+            <!--Basicamente o cabeçalho da página que em cada botão/link levará para outra pág -->
             <nav>
                 <ul class="nav-links">
                     <li>
@@ -32,7 +34,7 @@
                   </div>
             </nav>
         </header>
-
+            <!-- Conteúdo de caixa de informações que no caso são as informações dos pets-->
         <div class="pets">
             <h2 class="h1 text-center my-5">Veja os nossos <strong>PETS</strong></h2>
             <div class="lista-de-imagens row">

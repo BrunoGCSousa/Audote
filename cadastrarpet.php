@@ -1,4 +1,10 @@
 <?php
+// nessa parte em php estamos vendo a configuração na primeira linha de código e então,
+//armazena o id do usuário logado pelo php
+
+// O php vai verificar se a $_SESSION não está nulo, e ai vai selecionar o id que está configurado na sessão atual
+// e colocará a tabela na variavel result (resultado), e então é usado uma variavel row (linha) para guardar as linhas da tabela
+// caso o id esteja nulo, ele voltará para a página de cadastro
 require 'config.php';
 if(!empty($_SESSION["id"])){
     $id = $_SESSION["id"];
@@ -24,6 +30,7 @@ if(!empty($_SESSION["id"])){
 <body>
 
     <header>
+         <!-- Cabeçalho -->
         <nav>
             <ul class="nav-links">
                 <li>
@@ -55,7 +62,7 @@ if(!empty($_SESSION["id"])){
 
 
     <section>
-
+             <!-- Nessa seção será feito o formulário para cadastramento dos pets -->
         <form action="salvarpet.php" method="POST" enctype="multipart/form-data" class="container cadastrar-pet">
 
         <h1 class="text-center h1">Cadastre o seu Pet</h1>
