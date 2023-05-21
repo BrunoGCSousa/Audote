@@ -5,14 +5,13 @@
 // O php vai verificar se a $_SESSION não está nulo, e ai vai selecionar o id que está configurado na sessão atual
 // e colocará a tabela na variavel result (resultado), e então é usado uma variavel row (linha) para guardar as linhas da tabela
 // caso o id esteja nulo, ele voltará para a página de cadastro
-require 'config.php';
-if(!empty($_SESSION["id"])){
-    $id = $_SESSION["id"];
-    $result = mysqli_query($conn, "SELECT * FROM usuarios WHERE id = $id");
-    $row = mysqli_fetch_assoc($result);
-}else {
-    header("Location: reglog.php");
-}
+// if(!empty($_SESSION["id"])){
+//     $id = $_SESSION["id"];
+//     $result = mysqli_query($conn, "SELECT * FROM usuarios WHERE id = $id");
+//     $row = mysqli_fetch_assoc($result);
+// }else {
+//     header("Location: reglog.php");
+// }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,40 +28,10 @@ if(!empty($_SESSION["id"])){
 
 <body>
 
-    <header>
-         <!-- Cabeçalho -->
-        <nav>
-            <ul class="nav-links">
-                <li>
-                    <a href="audote.php"><img src="./src/img/logo.jpg" alt=""></a>
-                </li>
-                <li><a href="#">Cadastrar Pet</a></li>
-                <li><a href="#">Quero adotar</a></li>
-                <li><a href="#">Quero ajudar</a></li>
-                <li><a href="#">Parcerias</a></li>
-
-                <li><a href="logout.php" class="sair">Olá,
-                        <?php
-
-                        echo $row["nome"] . " " . $row["sobrenome"];
-
-                        ?><br> Deseja sair?
-                    </a></li>
-
-
-                <!-- <a href="reglog.php" class="botao-entrar">Entrar</a> -->
-            </ul>
-            <div class="hamburger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </nav>
-    </header>
-
+    <?php include('./secoes/nav.php') ?>
 
     <section>
-             <!-- Nessa seção será feito o formulário para cadastramento dos pets -->
+        <!-- Nessa seção será feito o formulário para cadastramento dos pets -->
         <form action="salvarpet.php" method="POST" enctype="multipart/form-data" class="container cadastrar-pet">
 
         <h1 class="text-center h1">Cadastre o seu Pet</h1>

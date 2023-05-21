@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&family=Zilla+Slab:wght@300;400;500;600;700&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +10,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 .pets {
-    margin-top: 150px;
     width: 100%;
 }
 
@@ -22,9 +20,6 @@ body {
 }
 
 header nav{
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -190,8 +185,8 @@ header nav ul li img {
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 3px;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;  
+    width: 300px;  
 }
 
 .descricao h4 {
@@ -216,7 +211,7 @@ header nav ul li img {
     background-color: rgb(51, 53, 185);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 825px) {
 
 
     .nav-links {
@@ -268,8 +263,8 @@ header nav ul li img {
     font-size: 2rem;
 }
 
-li .sair {
-    font-size: 1.5vw;
+li .sair a{
+    font-size: .3rem;
     margin: 0;
     width: 100px;
     height: 50px;
@@ -279,8 +274,9 @@ li .sair {
 .cadastrar-pet {
     margin-top: 150px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 50px 70px  !important;
 }
 
-form {
-    padding: 50px 70px  !important;
+td img {
+    width: 150px;
 }

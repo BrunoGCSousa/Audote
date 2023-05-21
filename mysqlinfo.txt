@@ -13,7 +13,7 @@ MYSQL HOSTNAME - sql213.epizy.com
 create table usuarios (
     id int PRIMARY KEY AUTO_INCREMENT,
     nome varchar(75),
-    sobrenome varchar(75),
+    tipoConta varchar(75),
     email varchar(100),
     senha varchar(75)
 );

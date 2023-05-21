@@ -16,25 +16,10 @@
 
         <header>
             <!--Basicamente o cabeçalho da página que em cada botão/link levará para outra pág -->
-            <nav>
-                <ul class="nav-links">
-                    <li>
-                        <a href="#"><img src="./src/img/logo.jpg" alt=""></a>
-                    </li>
-                    <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Quero adotar</a></li>
-                    <li><a href="#">Quero ajudar</a></li>
-                    <li><a href="#">Parcerias</a></li>
-                    <a href="reglog.php" class="botao-entrar">Entrar</a>
-                </ul>
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                  </div>
-            </nav>
-        </header>
-            <!-- Conteúdo de caixa de informações que no caso são as informações dos pets-->
+
+            <?php include('./secoes/nav.php') ?>
+        
+        <!-- Conteúdo de caixa de informações que no caso são as informações dos pets-->
         <div class="pets">
             <h2 class="h1 text-center my-5">Veja os nossos <strong>PETS</strong></h2>
             <div class="lista-de-imagens row">
