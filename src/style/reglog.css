@@ -109,6 +109,11 @@ form.sign-in-form {
   font-weight: 500;
 }
 
+.input-field select {
+  color: #333;
+  font-weight: 600;
+}
+
 .btn {
   width: 150px;
   background-color: #5995fd;

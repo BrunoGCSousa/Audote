@@ -217,18 +217,22 @@ if (isset($_POST["logsubmit"])) {
     ?>
 
     <script defer>
+        // atribui para as variaveis alguns elementos do HTML
         const sign_in_btn = document.querySelector("#sign-in-btn");
         const sign_up_btn = document.querySelector("#sign-up-btn");
         const container = document.querySelector(".container");
 
+        // no momento que for clicado no botão sign_up_btn, será adicionado uma classe css nele com efeitos visuais
         sign_up_btn.addEventListener("click", () => {
             container.classList.add("sign-up-mode");
         });
-
+        
+        // no momento que for clicado no botão sign_in_btn, será adicionado uma classe css nele com efeitos visuais
         sign_in_btn.addEventListener("click", () => {
             container.classList.remove("sign-up-mode");
         });
 
+        // faz com que a página não recarregue no momento em que o botão for apertado
         function enviarform(event) {
             event.preventdefault();
         }

@@ -1,5 +1,6 @@
 <?php
 
+//resgata as informações do formulário 
 $idPet = $_POST['idPet'];
 $nomePet = $_POST['nomePet'];
 $tipoAnimal = $_POST['tipoAnimal'];
@@ -11,8 +12,6 @@ $descricao = $_POST['descricao'];
 $vacinas = $_POST['vacinas'];
 $vermifugado = $_POST['vermifugado'];
 $imagemPet = $_POST['imagemPet'];
-
-echo $idPet;
 
     include("config.php");
 
@@ -32,9 +31,9 @@ echo $idPet;
         where idPet = '$idPet';
         "
         
-    );	    
-	$stmt ->execute();    
+    );	  // prepara o código sql  
+	$stmt ->execute();    // executa o código alterando os dados da tabela pet onde o id for igual o pré estabelecido
 
-    header("location:gerenciarpet.php"); 
+    header("location:gerenciarpet.php"); // redireciona para a página gerenciarpet.php
 
 ?>

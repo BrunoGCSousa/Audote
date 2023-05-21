@@ -12,18 +12,18 @@ include('config.php');
 
             <?php
 
-            if($_SESSION == null) {
+            if($_SESSION == null) { // verifica se tem algum dado na $_SESSION e se não tiver executa o trecho
                 echo "       
                 <li><a href='reglog.php'>Quero adotar</a></li>
                 <li><a href='#'>Quero ajudar</a></li>
                 <li><a href='#'>Parcerias</a></li>
                 ";
-            } else if ($_SESSION["tipoConta"] === 'admin') {
+            } else if ($_SESSION["tipoConta"] === 'admin') { // verifica se o tipo de conta é admin
                 echo "
                 <li><a href='cadastrarpet.php'>Cadastrar Pet</a></li>
                 <li><a href='gerenciarpet.php'>Gerenciar Pets</a></li>
                 ";
-            } else if ($_SESSION["tipoConta"] === 'user') {
+            } else if ($_SESSION["tipoConta"] === 'user') { // verifica se o tipo de conta é de user
                 echo "       
                     <li><a href='audote.php'>Quero adotar</a></li>
                     <li><a href='#'>Quero ajudar</a></li>
@@ -34,7 +34,7 @@ include('config.php');
             
             ?>
 
-            <?php if (!empty($_SESSION["id"])) {
+            <?php if (!empty($_SESSION["id"])) { // verifica se o id não está nulo e se não estiver executa o código
                 $id = $_SESSION["id"];
                 $result = mysqli_query($conn, "SELECT * FROM usuarios WHERE id = $id");
                 $row = mysqli_fetch_assoc($result);

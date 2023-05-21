@@ -35,10 +35,10 @@
             </thead>
             <tbody>
                 <?php
-                $stmt = $pdo->prepare("select * from pets");
-                $stmt->execute();
+                $stmt = $pdo->prepare("select * from pets"); // prepara o SQL
+                $stmt->execute(); // executa o código e seleciona todos os dados da tabela pets
 
-                while ($row = $stmt->fetch(PDO::FETCH_BOTH)) {
+                while ($row = $stmt->fetch(PDO::FETCH_BOTH)) { // faz um loop que percorre todos os dados da pesquisa sql
                     echo "<tr class='celula'>";
                     echo "<td> $row[idPet] </td>";
                     echo "<td> $row[nomePet] </td>";
@@ -54,7 +54,7 @@
                     echo "<td> 
                             <a href='removerPet.php?idPet=$row[0]'><i class='fa-solid fa-trash'></i></a>
                             <a href='?idPet=$row[0]&nomePet=$row[1]&tipoAnimal=$row[2]&raca=$row[3]&idadePet=$row[4]&porte=$row[5]&sexo=$row[6]&descricao=$row[7]&vacinas=$row[8]&vermifugado=$row[9]&imagemPet=$row[10]'><i class='fa-solid fa-pencil'></i></a>
-                          </td>";
+                          </td>"; // com o código ?idPet=$row[0] armazena no campo $_GET['idPet'] o valor da variavel $row[0] sendo possivel assim colocar esse valor em outras páginas
                     echo "</tr>";
                 }
                 ?>
@@ -154,6 +154,7 @@
             </div>
         </form>
     </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./src/js/app.js"></script>

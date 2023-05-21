@@ -18,11 +18,11 @@
 
     <?php 
     
-    $idPet = $_GET['idPet'];
+    $idPet = $_GET['idPet']; // pega o idPet de outra página com o método get
 
-    $stmt = $pdo->prepare("SELECT * FROM `pets` WHERE idPet = $idPet;");	    
-	$stmt ->execute();    
-    $row = $stmt ->fetch(PDO::FETCH_BOTH);
+    $stmt = $pdo->prepare("SELECT * FROM `pets` WHERE idPet = $idPet;"); // prepara o código SQL   
+	$stmt ->execute(); // executa o código onde irá ser selecionado na tabela pets todos os campos com o idPet sendo igual ao selecionado
+    $row = $stmt ->fetch(PDO::FETCH_BOTH); // irá colocar uma matriz na variavel $row com todos os campos da tabela selecionada e com o filtro aplicado
     ?>
 
             <!-- pet-details-area -->

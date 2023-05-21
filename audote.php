@@ -35,10 +35,10 @@ armazena o id do usuário logado pelo php,
             <div class="lista-de-imagens row">
 
                 <?php
-                    $stmt = $pdo->prepare("select * from pets");	
-                    $stmt ->execute();
+                    $stmt = $pdo->prepare("select * from pets");	// prepara o codigo sql
+                    $stmt ->execute(); // executa e seleciona todos os dados da tabela pets
                     
-                    while($row = $stmt ->fetch(PDO::FETCH_BOTH)){
+                    while($row = $stmt ->fetch(PDO::FETCH_BOTH)){ // cria um loop que roda todos os dados da tabela e traz eles em formato de matriz
                         
                     echo "
                         <div class='pet col-xl-3 col-md-5' style=\"--imagem-fundo:url('$row[10]');\">
