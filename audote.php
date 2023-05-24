@@ -41,10 +41,10 @@ armazena o id do usuário logado pelo php,
                     while($row = $stmt ->fetch(PDO::FETCH_BOTH)){ // cria um loop que roda todos os dados da tabela e traz eles em formato de matriz
                         
                     echo "
-                        <div class='pet col-xl-3 col-md-5' style=\"--imagem-fundo:url('$row[10]');\">
+                        <div class='pet col-xl-4 col-md-6' style=\"--imagem-fundo:url('$row[10]');\">
                         <div class='preto'></div>
                         <div class='descricao'>
-                            <h2>$row[1]</h2>
+                            <h2>$row[1]VAI TOMA NO CU PORRA</h2>
                             <h3>$row[2] $row[6] | $row[3]</h3>
                             <div class='oculto'>
                                 <h4>Idade: $row[4] anos <br>

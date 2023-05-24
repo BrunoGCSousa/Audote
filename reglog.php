@@ -98,7 +98,7 @@ if (isset($_POST["logsubmit"])) {
                         <input type="password" placeholder="Confirmar senha" name="regconfirmarsenha" required>
                     </div>
                     <input type="submit" value="Cadastrar" class="btn solid" name="regsubmit" id="regsubmit">
-                    <p><a href="#">Esqueceu sua senha?</a></p>
+                    <p><a href="#"></a></p>
                     <div class="erro" id="regerro">
                     </div>
                     <div class="acerto" id="acerto"></div>
@@ -123,7 +123,7 @@ if (isset($_POST["logsubmit"])) {
                     <button class="btn transparent" id="sign-in-btn">Entrar</button>
                 </div>
 
-                <img src="src/img/dona.svg" class="image" alt="">
+                <img src="src/img/adotar.svg" class="image" alt="">
             </div>
         </div>
     </div>

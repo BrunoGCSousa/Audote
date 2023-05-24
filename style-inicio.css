@@ -36,7 +36,7 @@ header nav .botao-entrar {
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
-    background-color: rgb(45, 45, 197);
+    background-color: #FF71DE;
     padding: 10px 25px;
     border-radius: 15px;
     color: #fff;
@@ -44,7 +44,7 @@ header nav .botao-entrar {
 }
 
 header nav .botao-entrar:hover {
-    background-color: rgb(103, 68, 255);
+    background-color: #ec38c2;
 }
 
 header nav ul {
@@ -71,7 +71,7 @@ header nav ul li a:hover{
 }
 
 header nav ul li img {
-    width: 70px;
+    width: 75px;
 }
 
 
@@ -103,7 +103,7 @@ header nav ul li img {
 .pet{
     margin: 10px 10px;
     border-radius: 50px;
-    width: 400px;
+    width: 500px;
     position: relative;
     height: 300px;
     display: flex;

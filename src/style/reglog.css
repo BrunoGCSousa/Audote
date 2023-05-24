@@ -116,7 +116,7 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color: #dd51bc;
   border: none;
   outline: none;
   height: 49px;
@@ -130,7 +130,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #4d84e2;
+  background-color: #7a166f;
 }
 .panels-container {
   position: absolute;
@@ -150,7 +150,8 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #ee41ee 0%, #6e215e 100%);
+  background-image: linear-gradient(-45deg, #FF71DE 0%, #dd51bc
+  100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -408,8 +409,8 @@ form.sign-in-form {
   display: block;
 }
 
-.esqueci p a{
-  text-decoration: none;
+a.esqueci{
+  color: #333;
 }
 
 .voltar{
@@ -417,7 +418,7 @@ form.sign-in-form {
   z-index: 99999;
   bottom: 20px;
   right: 20px;
-  background-color: #ee41ee;
+  background-color: #333;
   padding: 15px;
   border-radius: 20px;
   width: 50px;

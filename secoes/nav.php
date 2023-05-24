@@ -7,7 +7,7 @@ include('config.php');
     <nav>
         <ul class="nav-links">
             <li>
-                <a href="index.php"><img src="./src/img/logo.jpg" alt=""></a>
+                <a href="index.php"><img src="./src/img/logo.png" alt=""></a>
             </li>
 
             <?php
