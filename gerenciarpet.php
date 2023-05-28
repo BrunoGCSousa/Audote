@@ -55,7 +55,7 @@
                     echo "<td> $row[caracteristicas] </td>";
                     echo "<td> 
                             <a href='removerPet.php?idPet=$row[0]'><i class='fa-solid fa-trash'></i></a>
-                            <a href='?idPet=$row[0]&nomePet=$row[1]&tipoAnimal=$row[2]&raca=$row[3]&idadePet=$row[4]&porte=$row[5]&sexo=$row[6]&descricao=$row[7]&vacinas=$row[8]&vermifugado=$row[9]&imagemPet=$row[10]'><i class='fa-solid fa-pencil'></i></a>
+                            <a href='?idPet=$row[0]&nomePet=$row[1]&tipoAnimal=$row[2]&raca=$row[3]&idadePet=$row[4]&porte=$row[5]&sexo=$row[6]&descricao=$row[7]&vacinas=$row[8]&vermifugado=$row[9]&imagemPet=$row[10]&caracteristicas=$row[11]'><i class='fa-solid fa-pencil'></i></a>
                           </td>"; // com o código ?idPet=$row[0] armazena no campo $_GET['idPet'] o valor da variavel $row[0] sendo possivel assim colocar esse valor em outras páginas
                     echo "</tr>";
                 }
@@ -147,6 +147,11 @@
                 <label for="imagemPet" class="form-label">Imagem do Pet</label>
                 <input required type="text" value="<?php echo @$_GET['imagemPet']; ?>" name="imagemPet" id="imagemPet"
                     class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label for="caracteristicas" class="form-label">Características do Pet (separe por virgula)</label>
+                <textarea name="caracteristicas" id="caracteristicas" cols="30" rows="10" required class="form-control" maxlength="255"><?php echo @$_GET['caracteristicas']; ?></textarea>
             </div>
 
             <div class="row">
