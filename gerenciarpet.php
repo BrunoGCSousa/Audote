@@ -30,6 +30,7 @@
                     <th scope="col">Vacinas</th>
                     <th scope="col">Vermifugado</th>
                     <th scope="col">Imagem do Pet</th>
+                    <th scope="col">Características</th>
                     <th scope="col">Ações</th>
                 </tr>
             </thead>
@@ -51,6 +52,7 @@
                     echo "<td> $row[vacinas] </td>";
                     echo "<td> $row[vermifugado] </td>";
                     echo "<td> <img src='$row[imagemPet]'> </td>";
+                    echo "<td> $row[caracteristicas] </td>";
                     echo "<td> 
                             <a href='removerPet.php?idPet=$row[0]'><i class='fa-solid fa-trash'></i></a>
                             <a href='?idPet=$row[0]&nomePet=$row[1]&tipoAnimal=$row[2]&raca=$row[3]&idadePet=$row[4]&porte=$row[5]&sexo=$row[6]&descricao=$row[7]&vacinas=$row[8]&vermifugado=$row[9]&imagemPet=$row[10]'><i class='fa-solid fa-pencil'></i></a>

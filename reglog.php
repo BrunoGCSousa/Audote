@@ -46,7 +46,6 @@ if (isset($_POST["logsubmit"])) {
     <script src="https://kit.fontawesome.com/34e911297d.js" crossorigin="anonymous"></script>
     <title>Formulário de login e cadastro</title>
     <link rel="stylesheet" href="src/style/reglog.css">
-    <link rel="stylesheet" href="style-inicio.css">
 </head>
 
 <body>
@@ -67,8 +66,8 @@ if (isset($_POST["logsubmit"])) {
                     </div>
                     <input type="submit" value="Entrar" class="btn solid" name="logsubmit" id="logsubmit">
                     <p><a href="#" class="esqueci">Esqueceu sua senha?</a></p>
-                    <div class="erro" id="logerro">
-                    </div>
+                    <div class="erro" id="erro"></div>
+                    <div class="acerto" id="acerto"></div>
                 </form>
 
                 <form action="#" class="sign-up-form" method="POST" onsubmit="enviarform(event)">
@@ -99,9 +98,6 @@ if (isset($_POST["logsubmit"])) {
                     </div>
                     <input type="submit" value="Cadastrar" class="btn solid" name="regsubmit" id="regsubmit">
                     <p><a href="#"></a></p>
-                    <div class="erro" id="regerro">
-                    </div>
-                    <div class="acerto" id="acerto"></div>
                 </form>
             </div>
         </div>
@@ -151,9 +147,9 @@ if (isset($_POST["logsubmit"])) {
         if (mysqli_num_rows($duplicado) > 0) {
             echo
                 '<script defer>
-        const regerro = document.getElementById("regerro");
-        regerro.classList.add("active");
-        regerro.innerHTML = "Desculpe mas esse Email já está em uso";
+        const erro = document.getElementById("erro");
+        erro.classList.add("active");
+        erro.innerHTML = "Desculpe mas esse Email já está em uso";
         </script>';
         } else {
             if ($regsenha == $regconfirmarsenha) {
@@ -168,9 +164,9 @@ if (isset($_POST["logsubmit"])) {
             } else {
                 echo
                     '<script defer>
-            const regerro = document.getElementById("regerro");
-            regerro.classList.add("active");
-            regerro.innerHTML = "Os campos de senha não são iguais";
+            const erro = document.getElementById("erro");
+            erro.classList.add("active");
+            erro.innerHTML = "Os campos de senha não são iguais";
             </script>';
             }
         }
@@ -200,17 +196,17 @@ if (isset($_POST["logsubmit"])) {
             } else {
                 echo
                     '<script defer>
-            const logerro = document.getElementById("logerro");
-            logerro.classList.add("active");
-            logerro.innerHTML = "A senha está errada";
+            const erro = document.getElementById("erro");
+            erro.classList.add("active");
+            erro.innerHTML = "A senha está errada";
             </script>';
             }
         } else {
             echo
                 '<script defer>
-        const logerro = document.getElementById("logerro");
-        logerro.classList.add("active");
-        logerro.innerHTML = "Usuario não registrado";
+        const erro = document.getElementById("erro");
+        erro.classList.add("active");
+        erro.innerHTML = "Usuario não registrado";
         </script>';
         }
     }

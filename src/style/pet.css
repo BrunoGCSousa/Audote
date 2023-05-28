@@ -1,5 +1,3 @@
-
-/* 10. Breeder */
 .pet-details-area {
     background-image: url(../img/bg-pet.jpg);
     background-position: center;
@@ -17,6 +15,11 @@
     border-radius: 10px;
     padding: 45px 43px 60px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.pet-details-content p {
+    width: 100%;
+    word-break: break-all;
 }
 .pet-details-content > .title {
     font-size: 30px;
@@ -63,6 +66,23 @@
     color: #da36f0;
     font-weight: 700;
 }
+
+.caracteristica {
+    display: inline-block;
+    color: #da36f0;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0 10px 10px 0;
+    font-weight: 700;
+    background-color: #e385f03b;
+}
+
+.caracteristicas {
+    width: 90%;
+}
+
 .pet-dog-info .botao {
     margin-top: 17px;
 }
@@ -82,7 +102,7 @@ a.botao {
     background: #da36f0 repeat scroll 0 0;
     border: medium none;
     border-radius: 3px;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     display: inline-flex;
     align-items: center;

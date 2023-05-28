@@ -116,7 +116,7 @@ header nav ul li img {
 }
 
 .pet:hover {
-    height: 500px;
+    height: 530px;
     transition: 1s;
 }
 
@@ -131,7 +131,7 @@ header nav ul li img {
 }
 
 .oculto p {
-    width: 350px;
+    width: 270px;
     word-wrap: break-word;
 }
 
@@ -186,7 +186,7 @@ header nav ul li img {
     font-weight: 400;
     letter-spacing: 3px;
     margin-bottom: 20px;  
-    width: 300px;  
+    width: 270px;  
 }
 
 .descricao h4 {
@@ -271,12 +271,108 @@ li .sair a{
     text-align: center;
 }
 
+
+td img {
+    width: 150px;
+}
+/* nem sei onde eu to mais, acho q é no form de cadastrar */
+
 .cadastrar-pet {
     margin-top: 150px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     padding: 50px 70px  !important;
 }
 
-td img {
-    width: 150px;
+h1.h1{
+    font-size: 4rem;
+    font-family: 'Zilla Slab';
+    color: #333333;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+
+.pesquisar-input {
+    width: 100%;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    /* validação não aparece se deixar esse padding maldito abaixo de 8px */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    align-self: center;
+  }
+  
+.pesquisar-input i {
+    text-align: center;
+    line-height: 55px;
+    color: #acacac;
+    transition: 0.5s;
+    font-size: 1.1rem;
+  }
+  
+.pesquisar-input::placeholder{
+    color: #aaa;
+    font-weight: 500;
+}
+
+.botao {
+    -moz-user-select: none;
+    user-select: none;
+    background: #da36f0 repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 17px 25px;
+    text-align: center;
+    text-transform: capitalize;
+    touch-action: manipulation;
+    transition: all 0.3s ease 0s;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+    align-self: center;
+    gap: 10px;
+}
+
+.botao:hover {
+    color: #fff !important;
+}
+
+.botao::before {
+    content: "";
+    position: absolute;
+    -webkit-transition-duration: 800ms;
+    transition-duration: 800ms;
+    width: 200%;
+    height: 200%;
+    top: 110%;
+    left: 50%;
+    background: #292929;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: -1;
+    color: #d8d8da;
+}
+
+.botao:hover:before {
+    top: -40%;
 }

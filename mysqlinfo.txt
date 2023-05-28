@@ -34,5 +34,6 @@ create table pets(
     descricao varchar(255),
     vacinas varchar(75),
     vermifugado varchar(75),
-    imagemPet varchar(225)
+    imagemPet varchar(225),
+    caracteristicas varchar(400)
 );
