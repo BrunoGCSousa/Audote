@@ -22,10 +22,12 @@ if (!empty($_SESSION["id"])) {
 if (isset($_POST["logsubmit"])) {
     $logemail = $_POST["logemail"];
     $logsenha = $_POST["logsenha"];
+
     $result = mysqli_query($conn, "SELECT * FROM usuarios WHERE email = '$logemail'");
     $row = mysqli_fetch_assoc($result);
+
     if (mysqli_num_rows($result) > 0) {
-        if ($logsenha == $row["senha"]) {
+        if (password_verify($logsenha, $row['senha'])) {
             $_SESSION["login"] = true;
             $_SESSION["id"] = $row["id"];
             $_SESSION["tipoConta"] = $row["tipoConta"];
@@ -65,7 +67,7 @@ if (isset($_POST["logsubmit"])) {
                         <input type="password" placeholder="Senha" name="logsenha" required>
                     </div>
                     <input type="submit" value="Entrar" class="btn solid" name="logsubmit" id="logsubmit">
-                    <p><a href="#" class="esqueci">Esqueceu sua senha?</a></p>
+                    <p><a href="mail/esqueciasenha.php" class="esqueci">Esqueceu sua senha?</a></p>
                     <div class="erro" id="erro"></div>
                     <div class="acerto" id="acerto"></div>
                 </form>
@@ -79,7 +81,7 @@ if (isset($_POST["logsubmit"])) {
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <select id="tipoConta" name="tipoConta" required>
-                            <option disabled selected>Escolha o tipo de conta</option>
+                            <option value="user" disabled selected>Escolha o tipo de conta</option>
                             <option value="admin">Ong</option>
                             <option value="user">Adotante</option>
                         </select>
@@ -144,6 +146,7 @@ if (isset($_POST["logsubmit"])) {
         $regconfirmarsenha = $_POST["regconfirmarsenha"];
         $duplicado = mysqli_query($conn, "SELECT * FROM usuarios WHERE email = '$regemail'");
 
+
         if (mysqli_num_rows($duplicado) > 0) {
             echo
                 '<script defer>
@@ -153,7 +156,10 @@ if (isset($_POST["logsubmit"])) {
         </script>';
         } else {
             if ($regsenha == $regconfirmarsenha) {
-                $query = "INSERT INTO usuarios VALUES ('', '$regnome', '$tipoConta', '$regemail', '$regsenha')";
+
+                $hash = password_hash($regsenha, PASSWORD_DEFAULT);
+
+                $query = "INSERT INTO usuarios VALUES ('', '$regnome', '$tipoConta', '$regemail', '$hash')";
                 mysqli_query($conn, $query);
                 echo
                     '<script defer> 
@@ -222,7 +228,7 @@ if (isset($_POST["logsubmit"])) {
         sign_up_btn.addEventListener("click", () => {
             container.classList.add("sign-up-mode");
         });
-        
+
         // no momento que for clicado no botão sign_in_btn, será adicionado uma classe css nele com efeitos visuais
         sign_in_btn.addEventListener("click", () => {
             container.classList.remove("sign-up-mode");

@@ -449,3 +449,16 @@ a.esqueci{
 .voltar:hover {
   width: 330px;
 }
+
+.esqueci-senha {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.esqueci-senha .successo {
+  color: rgb(65, 209, 46);
+  text-align: center;
+  font-weight: 700;
+}
