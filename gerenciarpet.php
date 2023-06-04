@@ -67,7 +67,7 @@
 
     <section id="editarForm">
 
-        <form action="editarpet.php" method="POST" class="container cadastrar-pet">
+        <form action="editarPet.php" method="POST" class="container cadastrar-pet">
 
             <h1 class="text-center h1">Edite o seu Pet</h1>
 
