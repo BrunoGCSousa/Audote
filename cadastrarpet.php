@@ -1,20 +1,8 @@
 <?php
-// nessa parte em php estamos vendo a configuração na primeira linha de código e então,
-//armazena o id do usuário logado pelo php
-
-// O php vai verificar se a $_SESSION não está nulo, e ai vai selecionar o id que está configurado na sessão atual
-// e colocará a tabela na variavel result (resultado), e então é usado uma variavel row (linha) para guardar as linhas da tabela
-// caso o id esteja nulo, ele voltará para a página de cadastro
-// if(!empty($_SESSION["id"])){
-//     $id = $_SESSION["id"];
-//     $result = mysqli_query($conn, "SELECT * FROM usuarios WHERE id = $id");
-//     $row = mysqli_fetch_assoc($result);
-// }else {
-//     header("Location: reglog.php");
-// }
+include('config.php');
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" class="audote-root">
 
 <head>
     <meta charset="UTF-8">
@@ -24,7 +12,8 @@
     <title>Index</title>
     <link rel="stylesheet" href="style-inicio.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style/pgprincipal.css" />
 </head>
 
 <body>
@@ -130,8 +119,10 @@
 
     </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./src/js/app.js"></script>
+    <script src="src/js/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="src/js/pgprincipal.js"></script>
 </body>
 
 </html>

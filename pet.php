@@ -1,5 +1,8 @@
+<?php
+include('config.php');
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="audote-root">
 
 <head>
     <meta charset="UTF-8">
@@ -10,6 +13,7 @@
     <link rel="stylesheet" href="style-inicio.css">
     <link rel="stylesheet" href="src/style/pet.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/style/pgprincipal.css" />
 </head>
 
 <body>
@@ -28,7 +32,7 @@
     ?>
 
             <!-- pet-details-area -->
-            <section class="pet-details-area">
+            <section class="pet-details-area mt-100">
                 <div class="container">
                     <div class="row">
                         <div>
@@ -108,7 +112,9 @@
 
 
 
+    <script src="src/js/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="src/js/pgprincipal.js"></script>
     <script src="./src/js/app.js"></script>
 </body>
 

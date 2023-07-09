@@ -31,7 +31,7 @@ if (isset($_POST["logsubmit"])) {
             $_SESSION["login"] = true;
             $_SESSION["id"] = $row["id"];
             $_SESSION["tipoConta"] = $row["tipoConta"];
-            header("location: audote.php");
+            header("location: index.php");
         }
     }
 }
@@ -198,7 +198,7 @@ if (isset($_POST["logsubmit"])) {
             if ($logsenha == $row["senha"]) {
                 $_SESSION["login"] = true;
                 $_SESSION["id"] = $row["id"];
-                header("location: audote.php");
+                header("location: index.php");
             } else {
                 echo
                     '<script defer>

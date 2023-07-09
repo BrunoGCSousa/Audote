@@ -2,6 +2,8 @@
 
 include("config.php");
 
+$idUsuario = $_SESSION["id"];
+
 // Pega todas os campos do formulário e salva eles em suas respectivas variaveis
 $nomePet = $_POST['nomePet'];
 $tipoAnimal = $_POST['tipoAnimal'];
@@ -44,12 +46,12 @@ if (!empty($caracArray)) {
 
 
 // Armazena na váriavel $sql o código sql para adicionar na tabela os valores do formulário
-$sql = "INSERT INTO pets (idPet, nomePet, tipoAnimal, raca, idadePet, porte, sexo, descricao, vacinas, vermifugado, imagemPet, caracteristicas) 
-                    VALUES (null, '$nomePet', '$tipoAnimal', '$raca', '$idadePet', '$porte', '$sexo', '$descricao', '$vacina', '$vermifugado', '$destino', '$caracTexto')";
+$sql = "INSERT INTO pets (idPet, nomePet, tipoAnimal, raca, idadePet, porte, sexo, descricao, vacinas, vermifugado, imagemPet, caracteristicas, idUsuario) 
+                    VALUES (null, '$nomePet', '$tipoAnimal', '$raca', '$idadePet', '$porte', '$sexo', '$descricao', '$vacina', '$vermifugado', '$destino', '$caracTexto', '$idUsuario')";
 
 $stmt = $pdo->prepare($sql); // prepara o sql e armazena em outra variavel
 
 $stmt->execute(); // executa o código e adiciona todos os valores na tabela
-header("location:audote.php"); // redireciona o usuário para a página audote.php
+header("location:index.php"); // redireciona o usuário para a página audote.php
 
 ?>
