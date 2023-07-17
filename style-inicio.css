@@ -175,11 +175,6 @@ td img {
 }
 /* nem sei onde eu to mais, acho q é no form de cadastrar */
 
-.cadastrar-pet {
-    margin-top: 150px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    padding: 50px 70px  !important;
-}
 
 h1.h1{
     font-size: 4rem;
@@ -192,19 +187,17 @@ h1.h1{
 
 .pesquisar-input {
     width: 100%;
-    background-color: #f0f0f0;
     border-radius: 20px;
     /* validação não aparece se deixar esse padding maldito abaixo de 8px */
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
-    line-height: 1;
     font-weight: 600;
     font-size: 1.1rem;
     color: #333;
     align-self: center;
+    border: 1px solid #3333332d;
   }
   
 .pesquisar-input i {
@@ -273,4 +266,22 @@ h1.h1{
 
 .botao:hover:before {
     top: -40%;
+}
+
+.cep-botao button{
+    border: none;
+    border-radius: 0px 50px 50px 0px;
+    font-weight: 700;
+    padding: 10px;
+    background-color: var(--MainColor);
+    transition: var(--HoverTransition);
+    color: #fff;
+}
+
+.cep-botao button:hover {
+    background-color: var(--MainColorDark);
+}
+
+#cep-input {
+    border-radius: 50px 0 0 50px;
 }

@@ -49,11 +49,6 @@ include('config.php');
                                         echo "<span class='caracteristica'> $caracteristica </span>";
                                     } ?></p>
                                 </div>
-
-                            
-
-
-
                                 
                                 <div class="pet-dog-info">
                                     <h5 class="title">Informações do Pet</h5>

@@ -18,7 +18,7 @@ if (isset($_POST["redefinirsenha"])) {
 
         if ($result) {
             echo "<script> alert('Senha alterada com sucesso!'); </script>";
-            echo "<script> location.href='reglog.php'; </script>";
+            header("location:reglog.php");
             } else {
                 echo "<script> alert('Erro ao alterar senha!'); </script>";
             }

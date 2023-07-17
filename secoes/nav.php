@@ -30,6 +30,9 @@
                                             $tbusuario = mysqli_query($conn, "SELECT * FROM usuarios WHERE id = $id");
                                             $linhausuario = mysqli_fetch_assoc($tbusuario);
                                             echo "<h3 class='mb-5 fw-bold'>Seja bem vindo, <span style=' text-transform: capitalize; color: var(--MainColor)'>$linhausuario[nome]</span></h3>";
+                                        } else {
+                                            echo "<h3 class='mb-5 fw-bold'><a href='reglog.php' style='color: var(--MainColor)'>Entrar</a></h3>
+                                            ";
                                         }
 
                                         ?>
@@ -78,7 +81,7 @@
                                 if ($_SESSION["tipoConta"] === 'admin') { // verifica se o tipo de conta é admin
                                     echo "
                                                     <a role='button' href='cadastrarpet.php'>Cadastrar Pet</a>
-                                                    <a role='button' href='gerenciarpet.php'>Gerenciar Pets</a>
+                                                    <a role='button' href='gerenciarpets.php'>Gerenciar Pets</a>
                                                     ";
                                 } else {
                                     echo "
@@ -123,7 +126,7 @@
                         </div>
                     </a>
                     <ul class='dropdown-menu dropdown-menu-end'>
-                        <li><a class='dropdown-item' href='#'>Editar Perfil</a></li>
+                        <li><a class='dropdown-item' href='perfil.php'>Editar Perfil</a></li>
                         <li><a class='dropdown-item' href='logout.php'>Deslogar</a></li>
                     </ul>
                 </div>

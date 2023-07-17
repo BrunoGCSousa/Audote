@@ -5,7 +5,7 @@
 // Criação de conta ou login do usuario 
 
 if (!empty($_SESSION["id"])) {
-    header("Location: audote.php");
+    header("Location: index.php");
 }
 
 // No momento que o usuário apertar o botão de login, esse código será executado
@@ -159,7 +159,7 @@ if (isset($_POST["logsubmit"])) {
 
                 $hash = password_hash($regsenha, PASSWORD_DEFAULT);
 
-                $query = "INSERT INTO usuarios VALUES ('', '$regnome', '$tipoConta', '$regemail', '$hash')";
+                $query = "INSERT INTO usuarios VALUES ('', '$regnome', '$tipoConta', '$regemail', '$hash', '', '', '', '', '', '', '', '', '')";
                 mysqli_query($conn, $query);
                 echo
                     '<script defer> 

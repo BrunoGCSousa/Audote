@@ -26,7 +26,7 @@ $img_data = addslashes(file_get_contents($imagemPet));
 if ($_FILES['imagemPet']['name']) { //verifica se o arquivo enviado tem um nome. Se sim, significa que um arquivo foi selecionado no formulário.
     $imagemPet = $_FILES['imagemPet']['name']; //atribui o nome do arquivo original à variável $imagemPet.
     $imagemPet_temp = $_FILES['imagemPet']['tmp_name']; //atribui novamente o nome temporário do arquivo à variável $imagemPet_temp.
-    $destino = 'src/img/' . $imagemPet; //define o caminho de destino para o arquivo, que neste caso é uma pasta chamada "src/img" seguida pelo nome do arquivo original. Essa linha pode ser modificada para ajustar o caminho de destino desejado.
+    $destino = 'src/img/pets' . $imagemPet; //define o caminho de destino para o arquivo, que neste caso é uma pasta chamada "src/img" seguida pelo nome do arquivo original. Essa linha pode ser modificada para ajustar o caminho de destino desejado.
     move_uploaded_file($imagemPet_temp, $destino); // move o arquivo temporário para o destino especificado. Essa função move o arquivo do local temporário para o caminho de destino desejado, tornando-o permanente no servidor.
 }
 

@@ -1,6 +1,26 @@
 <?php
 include('config.php');
 
+$pagina = 1;
+$limite = 3;
+
+if(isset($_GET['pagina'])){
+    $pagina = filter_input(INPUT_GET, "pagina", FILTER_VALIDATE_INT);
+}
+
+if (!$pagina){
+    $pagina = 1;
+}
+
+$quantidade = $pdo->prepare("SELECT COUNT(*) FROM pets");
+$quantidade->execute();
+
+$quantidadelinha = $quantidade->fetch((PDO::FETCH_BOTH));
+
+$paginas = ceil($quantidadelinha[0] / $limite);
+
+$inicio = ($pagina * $limite) - $limite;
+
 if (!empty($_GET['search'])) {
     $data = $_GET['search'];
     $sql = "SELECT * FROM pets WHERE 
@@ -13,8 +33,10 @@ if (!empty($_GET['search'])) {
     descricao LIKE '%$data%'
     ";
 } else {
-    $sql = "SELECT * FROM pets";
+    $sql = "SELECT * FROM pets LIMIT $inicio, $limite";
 }
+
+
 
 ?>
 <!DOCTYPE html>
@@ -60,10 +82,6 @@ if (!empty($_GET['search'])) {
                     <div class="col-auto">
                         <h2>Mostrando<span style="color: var(--MainColor);">
                             <?php 
-                            $quantidade = $pdo->prepare("SELECT COUNT(*) FROM PETS");
-                            $quantidade->execute();
-
-                            $quantidadelinha = $quantidade->fetch((PDO::FETCH_BOTH));
                             echo $quantidadelinha[0]
                             
                             ?>
@@ -119,13 +137,17 @@ if (!empty($_GET['search'])) {
 
             <div class="row mt-4 mt-lg-5 justify-content-center align-items-center">
                 <div class="col-auto">
-                    <nav class="mt-3 mt-sm-0" aria-label="Candidates pagination">
+                    <nav class="mt-3 mt-sm-0">
                         <ul class="pagination pagination">
-                            <li class="page-item active" aria-current="page">
-                                <span class="page-link">1</span>
-                            </li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="?pagina=1"><i class="fa-solid fa-angles-left"></i></a></li>
+                            <?php if ($pagina>1): ?>
+                            <li class="page-item"><a class="page-link" href="?pagina=<?=$pagina-1?>"><i class="fa-solid fa-angle-left"></i></a></li>
+                            <?php endif; ?>
+                            <li class="page-item active"><span class="page-link" href="#"><?=$pagina ?> </span></li>
+                            <?php if($pagina<$paginas): ?>
+                            <li class="page-item"><a class="page-link" href="?pagina=<?=$pagina+1?>"><i class="fa-solid fa-angle-right"></i></a></li>
+                            <?php endif; ?>
+                            <li class="page-item"><a class="page-link" href="?pagina=<?=$paginas?>"><i class="fa-solid fa-angles-right"></i></a></li>
                         </ul>
                     </nav>
                 </div>

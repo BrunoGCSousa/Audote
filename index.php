@@ -50,13 +50,14 @@ include('config.php');
                                                 $id = $_SESSION["id"];
                                                 $tbusuario = mysqli_query($conn, "SELECT * FROM usuarios WHERE id = $id");
                                                 $linhausuario = mysqli_fetch_assoc($tbusuario);
-                                                echo "<h3 class='mb-5 fw-bold'>Seja bem vindo, <span style=' text-transform: capitalize; color: var(--MainColor)'>$linhausuario[nome]</span></h3>";
+                                                echo "<h3 class='mb-5 fw-bold'>Seja bem vindo, <span style=' text-transform: capitalize; color: var(--MainColor)'>$linhausuario[nome]</span></h3>
+                                                <a role='button' class='nav-link' href='perfil.php'>Perfil</a>";
+                                            } else {
+                                                echo "<h3 class='mb-5 fw-bold'><a href='reglog.php' style='color: var(--MainColor)'>Entrar</a></h3>
+                                                ";
                                             }
 
                                             ?>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a role="button" class="nav-link" href="#">Inicio</a>
                                         </li>
                                         <li class="nav-item">
                                             <a role="button" class="nav-link" href="#">Quero adotar</a>
@@ -76,12 +77,15 @@ include('config.php');
                                                 if ($_SESSION["tipoConta"] === 'admin') { // verifica se o tipo de conta é admin
                                                     echo "
                                                     <a role='button' class='nav-link' href='cadastrarpet.php'>Cadastrar Pet</a>
-                                                    <a role='button' class='nav-link' href='gerenciarpet.php'>Gerenciar Pets</a>
+                                                    <a role='button' class='nav-link' href='gerenciarpets.php'>Gerenciar Pets</a>
                                                     ";
                                                 }
                                             }
-
+                                            
                                             ?>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a role="button" class="nav-link" href="logout.php">Sair</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -106,11 +110,10 @@ include('config.php');
                 </div>
                 <nav class="user-nav d-none d-sm-flex">
                     <?php
-
                     if ($_SESSION == null) {
                         echo '<a href="reglog.php" class="btn rounded-pill nav-btn">Entrar</a>';
                     } else if (!empty($_SESSION["id"])) {
-                        echo "<a href='#' class='btn rounded-pill nav-btn mx-2'><i class='fa-solid fa-user'></i> Perfil</a>";
+                        echo "<a href='perfil.php' class='btn rounded-pill nav-btn mx-2'><i class='fa-solid fa-user'></i> Perfil</a>";
                         echo "<a href='logout.php' class='btn rounded-pill nav-btn'><i class='fa-solid fa-right-from-bracket'></i> Sair</a>";
                     }
 
