@@ -246,6 +246,8 @@ a:hover {
 }
 
 .logo-nav-container {
+    flex-direction: row-reverse;
+    gap: 20px;
     display: flex;
     align-items: center;
 }
