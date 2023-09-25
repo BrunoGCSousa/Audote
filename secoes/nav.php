@@ -3,7 +3,7 @@
         <div class="header-container">
             <div class="logo-nav-container">
                 <div class="logo">
-                    <a href="index.php"><span style="color: var(--MainColor)">Audote</span></a>
+                    <!-- <a href="index.php"><span style="color: var(--MainColor)">Audote</span></a> -->
                 </div>
                 <div class="nav-trigger navbar d-xl-none flex-fill">
                     <a role="button" data-bs-toggle="offcanvas" data-bs-target="#MobileNav" aria-controls="MobileNav">
@@ -73,7 +73,7 @@
                 <nav class="nav dropdown-hover-all d-none d-xl-block">
                     <ul class="nav justify-content-end">
                         <li class="nav-item">
-                            <a role="button" href="#">Quero adotar</a>
+                        <a href="index.php"><span style="color: var(--MainColor); font-size: 1.5rem; font-weight: 700;">Audote</span></a>
                         </li>
                         <li class="nav-item">
                             <?php
