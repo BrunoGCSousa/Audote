@@ -1,6 +1,6 @@
 <?php 
 // quando o usuario deslogar será retirado as informções dele NO SITE não no banco
-
+// inclui a configuração do banco de dados do arquivo config.php
 require 'config.php';
 $_SESSION = []; // limpa todas as variáveis armazenadas na sessão atual. A variável superglobal $_SESSION é usada para armazenar dados da sessão em PHP, e atribuir um array vazio a ela remove todos os dados existentes
 session_unset(); //remove todas as variáveis de sessão. Isso garante que todas as variáveis de sessão sejam removidas, mesmo que você tenha definido outras além da superglobal $_SESSION

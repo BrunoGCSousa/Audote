@@ -1,8 +1,9 @@
 <?php
+// inclui a configuração do banco de dados do arquivo config.php
 
 require 'config.php';
 
-
+// bloco de código para redefinir senha do usuario
 if (isset($_POST["redefinirsenha"])) {
     $email = $_POST["email"];
     $senha = $_POST["senha"];
@@ -25,9 +26,8 @@ if (isset($_POST["redefinirsenha"])) {
         } else {
             echo "<script> alert('As senhas precisam ser iguais!'); </script>";
     }
-
-
 }
+// Fim do bloco
 ?>
 
 <!DOCTYPE html>
@@ -44,8 +44,8 @@ if (isset($_POST["redefinirsenha"])) {
 
 <body>
 
+    <!-- Form de redefinir a senha -->
     <div class="esqueci-senha">
-
         <form action="" class="sign-in-form" method="POST" onsubmit="enviarform(event)">
             <h2 class="title">Redefina sua senha</h2>
             <div class="input-field">
@@ -64,8 +64,9 @@ if (isset($_POST["redefinirsenha"])) {
             <input type="submit" value="Redefinir" class="btn solid" name="redefinirsenha" id="redefinirsenha">
         </form>
     </div>
+<!-- Fim do form -->
 
-
+<!-- Botão para voltar pra página principal -->
     <div class="voltar">
         <a href="index.php">
             <h4>Voltar para a página principal?</h4>
@@ -75,6 +76,7 @@ if (isset($_POST["redefinirsenha"])) {
 
 
     <script defer>
+        // Faz com que o formulario não recarregue a página
         function enviarform(event) {
             event.preventdefault();
         }

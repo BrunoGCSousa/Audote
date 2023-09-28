@@ -1,8 +1,9 @@
 <?php
+// inclui a configuração do banco de dados do arquivo config.php
 
 require 'config.php';
 
-
+// codigo para redefinir a senha
 if (isset($_POST["redefinirsenha"])) {
     $id = $_SESSION["id"];
     $senhaantiga = $_POST["senhaantiga"];
@@ -32,11 +33,8 @@ if (isset($_POST["redefinirsenha"])) {
         } else {
         echo "<script> alert('Sua senha antiga não é essa!'); </script>";
     }
-
-
-
-
 }
+
 ?>
 <!doctype html>
 <html lang="en" class="audote-root">
@@ -55,11 +53,12 @@ if (isset($_POST["redefinirsenha"])) {
 </head>
 
 <body style="background-color: var(--MainColorLight);">
+<!-- Navegação do perfil -->
     <div class="dashboard-side-panel d-none d-lg-block">
         <div class="logo">
             <a href="index.php" class="animate"><span style="color: var(--MainColor)">Audote</span></a>
         </div>
-
+<!-- Navegação do desktop -->
         <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
             <div class="dashboard-side-label">Ferramentas administrativas</div>
             <ul class="list-unstyled">
@@ -78,6 +77,8 @@ if (isset($_POST["redefinirsenha"])) {
             </ul>
         </nav>
     </div>
+    <!-- fim navegação desktop -->
+    <!-- Navegação do mobile -->
     <div class="dashboard-content">
         <div class="dashboard-content-header">
             <div class="nav-trigger navbar is-dashboard d-lg-none">
@@ -118,7 +119,10 @@ if (isset($_POST["redefinirsenha"])) {
                 </div>
             </div>
         </div>
+        <!-- fim navegação desktop -->
+        <!-- Fim avegação do perfil -->
 
+        <!-- Sessão para mudar a senha -->
         <div class="dashboard-content-details">
             <h1>Mudar a senha</h1>
             <p>Escolha uma nova senha para sua conta</p>
@@ -157,12 +161,14 @@ if (isset($_POST["redefinirsenha"])) {
             </form>
         </div>
 
+        <!-- Fim para mudar a senha -->
     </div>
 
     <script src="src/js/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/pgprincipal.js"></script>
     <script defer>
+        // Função para fazer o form não recarregar a página
         function enviarform(event) {
             event.preventdefault();
         }

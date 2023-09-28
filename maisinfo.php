@@ -1,4 +1,5 @@
 <?php 
+// inclui a configuração do banco de dados do arquivo config.php
 
 include("config.php");
 $id = $_SESSION["id"];
@@ -14,6 +15,7 @@ $cidade = $_POST['cidade'];
 $bairro = $_POST['bairro'];
 $numero = $_POST['numero'];
 
+// Salva o resto das informações do usuario
 $stmt = $pdo->prepare(
     "update usuarios set
     nome = '$nome',

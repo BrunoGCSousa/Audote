@@ -1,4 +1,7 @@
-<?php require 'config.php';
+<?php 
+// inclui a configuração do banco de dados do arquivo config.php
+
+require 'config.php';
 
 // Não permitir que entre nessa tela se ja estiver logado
 
@@ -125,7 +128,7 @@ if (isset($_POST["logsubmit"])) {
             </div>
         </div>
     </div>
-
+<!-- botao pra voltar pra página principal -->
     <div class="voltar">
         <a href="index.php">
             <h4>Voltar para a página principal?</h4>

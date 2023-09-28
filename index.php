@@ -1,5 +1,6 @@
 <?php
 include('config.php');
+// inclui a configuração do banco de dados do arquivo config.php
 
 ?>
 
@@ -19,6 +20,7 @@ include('config.php');
 </head>
 
 <body>
+    <!-- Inicio do cabeçalho -->
     <header class="header fixed-top bigger px-5">
         <div class="audote-container">
             <div class="header-container">
@@ -123,7 +125,9 @@ include('config.php');
             </div>
         </div>
     </header>
+    <!-- Fim do cabeçalho -->
 
+    <!-- Banner inicial -->
     <section class="hero hero-bg cover" style="background-image: url(src/img/hero-bg-2.jpg)">
         <div class="hero-opacity"></div>
         <div class="hero-caption">
@@ -146,8 +150,9 @@ include('config.php');
             </div>
         </div>
     </section>
+    <!-- Fim do banner -->
 
-    <!-- counter-area -->
+    <!-- Sessão do contador -->
     <section class="counter-area counter-bg">
         <div class="container">
             <div class="row justify-content-center">
@@ -209,8 +214,9 @@ include('config.php');
             </div>
         </div>
     </section>
-    <!-- counter-area-end -->
+    <!-- Fim do contador -->
 
+    <!-- Sessão de ultimos pets -->
     <section>
         <div class="mx-5">
             <h2 class="section-h2 my-5">
@@ -260,7 +266,9 @@ include('config.php');
             </div>
         </div>
     </section>
+    <!-- Fim da sessão -->
 
+    <!-- Sessão beneficios -->
     <section class="mx-5 d-flex flex-column justify-content-center align-items-center">
         <h2 class="section-h2 my-5">Não compre, <span style="color: var(--MainColor)">Audote</span>.</h2>
         <div class="row justify-content-md-center">
@@ -295,7 +303,9 @@ include('config.php');
             </div>
         </div>
     </section>
+    <!-- Fim da sessão beneficios -->
 
+    <!-- Sessão adicional -->
     <section class="mb-100 mt-100">
         <div class="promo-img cover pt-100 pb-100" style="background-image: url(src/img/bg1.jpg)">
             <div class="row justify-content-md-center">
@@ -320,8 +330,9 @@ include('config.php');
             </div>
         </div>
     </section>
+    <!-- Fim da sessão adicional -->
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer class="site-footer style-1 mt-100" id="footer" style="background-image: url(src/img/bg10.png)">
         <div class="footer-top">
             <div class="container">
@@ -384,7 +395,7 @@ include('config.php');
                 </div>
             </div>
         </div>
-        <!-- footer bottom part -->
+        <!-- Rodapé de baixo -->
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
@@ -392,11 +403,13 @@ include('config.php');
                         <span class="copyright-text">Copyright © 2023
                             <a href="#" target="_blank">AUDOTE</a>. Todos
                             direitos Reservados.</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </footer>
+            <!-- Fim do rodapé de baixo -->
+        </footer>
+        <!-- Fim do rodapé -->
 
     <script src="src/js/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

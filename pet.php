@@ -1,5 +1,7 @@
 <?php
 include('config.php');
+// inclui a configuração do banco de dados do arquivo config.php
+
 ?>
 <!DOCTYPE html>
 <html lang="en" class="audote-root">
@@ -41,7 +43,7 @@ include('config.php');
     $caracArray = explode(',', $caracTexto);
     ?>
 
-    <!-- pet-details-area -->
+    <!-- Sessão de detalhes do pet -->
     <section class="pet-details-area mt-100">
         <div class="container">
             <div class="row">
@@ -135,7 +137,7 @@ include('config.php');
             </div>
         </div>
     </section>
-    <!-- pet-details-area-end -->
+    <!-- Fim da sessão -->
 
 
 

@@ -1,4 +1,5 @@
 <?php
+// inclui a configuração do banco de dados do arquivo config.php
 
 include("config.php");
 

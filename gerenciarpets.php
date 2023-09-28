@@ -1,4 +1,6 @@
 <?php
+// inclui a configuração do banco de dados do arquivo config.php
+
 include('config.php');
 ?>
 <!doctype html>
@@ -18,6 +20,7 @@ include('config.php');
 </head>
 
 <body style="background-color: var(--MainColorLight);">
+<!-- Menu perfil -->
     <div class="dashboard-side-panel d-none d-lg-block">
         <div class="logo">
             <a href="index.php"><span style="color: var(--MainColor)">Audote</span></a>
@@ -82,6 +85,9 @@ include('config.php');
             </div>
 
         </div>
+<!-- Fim menu perfil -->
+
+<!-- Inicio da sessão pra gerenciar os pets -->
 
         <div class="dashboard-content-details">
 
@@ -136,8 +142,10 @@ include('config.php');
                 </table>
             </div>
         </div>
+<!-- Fim da sessão pra gerenciar os pets -->
 
     </div>
+
 
     <script src="src/js/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

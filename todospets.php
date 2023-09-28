@@ -1,6 +1,8 @@
 <?php
+// inclui a configuração do banco de dados do arquivo config.php
 include('config.php');
 
+// código para definir o tamanho da página e o limite de cards em cada página e de pesquisar o animal
 $pagina = 1;
 $limite = 3;
 
@@ -37,7 +39,6 @@ if (!empty($_GET['search'])) {
 }
 
 
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br" class="audote-root">
@@ -55,9 +56,10 @@ if (!empty($_GET['search'])) {
 </head>
 
 <body>
-
+<!-- inclui o menu de navegação -->
     <?php include('./secoes/nav.php') ?>
 
+    <!-- Menu de pesquisa -->
     <section class="page-header-simple" style="background-color: var(--SecondaryColor);">
         <div class="container">
             <h1>Procure o seu pet ideal</h1>
@@ -74,7 +76,8 @@ if (!empty($_GET['search'])) {
             </div>
         </div>
     </section>
-
+    <!-- Fim da sessão -->
+    <!-- Sessão para aparecer os animais que foram pesquisados -->
     <section class="mt-100 px-5">
         <div class="">
             <div class="candidates-list-top mb-5">
@@ -154,8 +157,9 @@ if (!empty($_GET['search'])) {
             </div>
         </div>
     </section>
+    <!-- Fim da sessão -->
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer class="site-footer style-1 mt-100" id="footer" style="background-image: url(src/img/bg10.png)">
         <div class="footer-top">
             <div class="container">
@@ -218,7 +222,7 @@ if (!empty($_GET['search'])) {
                 </div>
             </div>
         </div>
-        <!-- footer bottom part -->
+        <!-- Rodapé baixo -->
         <div class="footer-bottom">
             <div class="container">
                 <div class="row">
@@ -231,6 +235,7 @@ if (!empty($_GET['search'])) {
             </div>
         </div>
     </footer>
+    <!-- Fim do rodapé -->
 
     <script src="src/js/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

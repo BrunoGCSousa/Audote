@@ -1,5 +1,7 @@
 <?php
+// inclui a configuração do banco de dados do arquivo config.php
 include('config.php');
+// selecionar o usuario que está logado
 $id = $_SESSION["id"];
 $tbusuario = $pdo->prepare("SELECT * FROM usuarios WHERE id = $id");
 $tbusuario->execute();
@@ -22,6 +24,8 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
 </head>
 
 <body style="background-color: var(--MainColorLight);">
+<!-- Navegação do perfil -->
+<!-- Navegação desktop -->
     <div class="dashboard-side-panel d-none d-lg-block">
         <div class="logo">
             <a href="index.php" class="animate"><span style="color: var(--MainColor)">Audote</span></a>
@@ -45,6 +49,8 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
             </ul>
         </nav>
     </div>
+    <!-- Fim da navegação desktop -->
+    <!-- Navegação mobile -->
     <div class="dashboard-content">
         <div class="dashboard-content-header">
             <div class="nav-trigger navbar is-dashboard d-lg-none">
@@ -85,9 +91,11 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
                     </div>
                 </div>
             </div>
-
         </div>
+        <!-- Fim da navegação mobile -->
+    <!-- Fim da navegação de perfil -->
 
+    <!-- Configuração do perfil -->
         <div class="dashboard-content-details">
             <h1>Configurar perfil</h1>
             <p>Edite as suas informações de perfil</p>
@@ -179,6 +187,8 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
             </form>
         </div>
 
+        <!-- Fim da configuraçao do perfil -->
+
     </div>
 
     <script src="src/js/jquery-3.4.1.min.js"></script>
@@ -187,6 +197,7 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
     <script>
         $(document).ready(function () {
+            // mascara de cpf, cep e telefone
             $('#cpf-input').inputmask('999.999.999-99');
             $('#cep-input').inputmask('99999-999');
             $('#tel-input').inputmask('+55 99 99999-9999');
