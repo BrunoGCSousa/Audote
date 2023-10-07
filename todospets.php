@@ -57,7 +57,6 @@ if (!empty($_GET['search'])) {
 
 <body>
 <!-- inclui o menu de navegação -->
-    <?php include('./secoes/nav.php') ?>
 
     <!-- Menu de pesquisa -->
     <section class="page-header-simple" style="background-color: var(--SecondaryColor);">
@@ -79,6 +78,37 @@ if (!empty($_GET['search'])) {
     <!-- Fim da sessão -->
     <!-- Sessão para aparecer os animais que foram pesquisados -->
     <section class="mt-100 px-5">
+    <?php include('./secoes/nav.php') ?>
+
+        <!-- <h1>Vamos adotar ?</h1>
+        <label>Espécie</label>
+        <select id="especie">
+
+            <option value="">Selecione</option>
+            <option value="cachorro">Cachorro</option>
+            <option value="gato">Gato</option>
+
+        </select>
+
+        <label>Sexo</label>
+        <select id="sexo">
+
+            <option value="">Selecione</option>
+            <option value="macho">Macho</option>
+            <option value="femea">Fêmea</option>
+
+        </select>
+
+        <label>Porte</label>
+        <select id="porte">
+
+            <option value="">Selecione</option>
+            <option value="grande">Grande</option>
+            <option value="medio">Medio</option>
+            <option value="pequeno">Pequeno</option>
+
+        </select> -->
+
         <div class="">
             <div class="candidates-list-top mb-5">
                 <div class="row justify-content-between align-items-center">

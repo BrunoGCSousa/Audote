@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*area do Banner - abaixo do Header*/
+.cachorro{
+    background: #545454 ;
+}
+
+.cachorro img{   
+    width: 100%;
+    height: 100%;
+    max-height: 900px;
+}
+
+@media screen and (max-width: 768px){
+    .cachorro img{
+        padding-top: 30px;
+    }
+}
+/*fim da area do Banner abaixo do Header*/
+
+
+/*area do Auqmia com a logo*/
+.heading-Auq{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.heading-Auq h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.heading-Auq h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #dd51bc;
+}
+
+@media screen and (max-width: 768px){
+    .heading-Auq{
+        padding: 0px 20px;
+    }
+
+    .heading-Auq h1{
+        font-size: 36px;
+    }
+}
+/*fim da area do Auqmia com a logo*/
+
+
+
+
+/*area dos sobre nos*/
+.container-sobreNos{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.sobreNos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sobreNos-imagem{
+    flex: 1;
+    margin-left: 40px;
+    overflow: hidden;
+}
+
+.sobreNos-imagem img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+    border-radius: 30px;
+}
+
+.sobreNos-imagem:hover img{
+    transform: scale(1.2);
+}
+
+.sobreNos-content{
+    flex: 1;
+}
+
+.sobreNos-content h2{
+    font-size: 23px;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+
+.sobreNos-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+
+@media screen and (max-width: 768px){
+    .container-sobreNos{
+        padding: 0px;
+    }
+    
+    .sobreNos{
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .sobreNos-imagem{
+        margin-left: 0px;
+        margin-bottom: 20px;
+    }
+
+    .sobreNos-content p{
+        padding: 0px;
+        font-size: 16px;
+    }
+}
+
+/*fim dos sobre nos*/
+
+
+/*area dos objetivos*/
+
+
+.container-objetivos{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.objetivos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.objetivos-imagem{
+    flex: 1;
+    margin-right: 40px;
+    overflow: hidden;
+}
+
+.objetivos-imagem img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+    border-radius: 30px;
+}
+
+.objetivos-imagem:hover img{
+    transform: scale(1.2);
+}
+
+.objetivos-content{
+    flex: 1;
+}
+
+.objetivos-content h2{
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.objetivos-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+}
+
+@media screen and (max-width: 768px){
+    .container-objetivos{
+        padding: 0px;
+    }
+    
+    .objetivos{
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .objetivos-imagem{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .objetivos-content p{
+        padding: 0px;
+        font-size: 16px;
+    }
+}
+/*fim dos objetivos*/
+
+/*area onde fala um pouco sobre o Audote*/
+.sobre-Audote{
+    padding-top: 40px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.sobre-Audote h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.sobre-Audote h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #dd51bc;
+}
+
+.sobre-Audote p{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+@media screen and (max-width: 768px){
+    .sobre-Audote{
+        padding: 0px 20px;
+    }
+
+    .sobre-Audote h1{
+        font-size: 36px;
+    }
+
+    .sobre-Audote p{
+        font-size: 17px;
+        margin-bottom: 0px;
+    }
+}
+/*fim da area onde fala um pouco sobre o Audote*/
+
+
+
+/*area da palavra Integrantes*/
+.integrantes{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.integrantes h1{
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.integrantes h1::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    display: block;
+    margin: 0 auto;
+    background-color: #dd51bc;
+}
+
+@media screen and (max-width: 768px){
+    .integrantes{
+        padding: 0px 20px;
+    }
+
+    .integrantes h1{
+        font-size: 36px;
+    }
+}
+/*fim da area da palavra integrantes*/
+
+
+
+/*Area dos desenvolvedores*/
+
+.oi{
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-cards{
+    max-width: 950px;
+    
+    width: 100%;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.container-cards .main-card{
+    width: 200%;
+    
+    display: flex;
+    justify-content: space-evenly;
+    transition: all 1s ease;
+}
+
+#two:checked ~ .main-card{
+    margin-left: -100%;
+}
+
+.main-card .cards{
+    width: calc(100% / 2 - 10px);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    flex-wrap: wrap;
+}
+
+.main-card .cards .card{
+    background: #fff;
+    width: calc(100% / 3 - 10px);
+    padding: 30px;
+    border-radius: 24px;
+    transition: all 0.4s ease;
+}
+
+.main-card .cards .card:hover{
+    transform: translateY(-15px);
+}
+
+.cards .card .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.cards .card .content .img{
+    position: unset !important;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 14px;
+    background: #dd51bc;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.card .content .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #dd51bc;
+    border: 3px solid #fff;
+}
+
+.card .content .details .name{
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+
+.card .content .details .job{
+    font-size: 20px;
+}
+
+.card .content .media-icons{
+    display: flex;
+    margin-top: 10px;
+}
+
+.card .content .media-icons a{
+    height: 35px;
+    width: 35px;
+    color: #fff;
+    background: #dd51bc;
+    margin: 0 4px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 33px;
+    font-size: 14px;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.card .content .media-icons a:hover{
+    border-color: #dd51bc;
+    color: #dd51bc;
+    background: #fff;
+}
+
+.button{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+
+.button label{
+    height: 15px;
+    width: 15px;
+    background: #dd51bc;
+    margin: 0 4px;
+    border-radius: 20px;
+    transition: all 0.5 ease;
+}
+
+.button label.active{
+    width: 35px;
+}
+
+#one:checked ~ .button label.one{
+    width: 35px;
+}
+
+#two:checked ~ .button label.two{
+    width: 35px;
+}
+
+#two:checked ~ .button label.one{
+    width: 15px;
+}
+
+#one:checked ~ .button label.two{
+    width: 15px;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+@media (max-width: 768px){
+    .main-card .cards .card{
+        width: calc(100% / 2 - 10px);
+        margin: 20px 0 10px 0;
+    }
+}
+
+@media (max-width: 600px){
+    .main-card .cards .card{
+        width: 100%;
+    }
+}
+
+/* termina aqui a area dos desenvolvedores*/

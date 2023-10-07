@@ -63,16 +63,16 @@ include('config.php');
                                             ?>
                                         </li>
                                         <li class="nav-item">
-                                            <a role="button" class="nav-link" href="#">Quero adotar</a>
+                                            <a role="button" class="nav-link" href="todospets.php">Quero adotar</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a role="button" class="nav-link" href="#">Quero ajudar</a>
+                                            <a role="button" class="nav-link" href="doacoes.php">Quero ajudar</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a role="button" class="nav-link" href="#">Parcerias</a>
+                                            <a role="button" class="nav-link" href="parcerias.php">Parcerias</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a role="button" class="nav-link" href="#">Quem somos</a>
+                                            <a role="button" class="nav-link" href="quemSomos.php">Quem somos</a>
                                         </li>
                                         <li class="nav-item">
                                             <?php
