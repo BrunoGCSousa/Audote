@@ -24,8 +24,8 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
 </head>
 
 <body style="background-color: var(--MainColorLight);">
-<!-- Navegação do perfil -->
-<!-- Navegação desktop -->
+    <!-- Navegação do perfil -->
+    <!-- Navegação desktop -->
     <div class="dashboard-side-panel d-none d-lg-block">
         <div class="logo">
             <a href="index.php" class="animate"><span style="color: var(--MainColor)">Audote</span></a>
@@ -45,7 +45,7 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
                 }
                 ?>
                 <li><a href="mudarSenha.php"><span class="fa fa-lock"></span>Mudar a senha</a></li>
-                <li><a href="logout.php"><span class="fa-solid fa-right-from-bracket"></span>Deslogar</a></li>
+                <li><a href="#" onclick="sair()"><span class="fa-solid fa-right-from-bracket"></span>Deslogar</a></li>
             </ul>
         </nav>
     </div>
@@ -84,7 +84,7 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
                                 ?>
                                 <li class="nav-item"><a href="mudarSenha.php"><span class="fa fa-lock"></span>Mudar a
                                         senha</a></li>
-                                <li class="nav-item"><a href="logout.php"><span
+                                <li class="nav-item"><a href="#" onclick="sair()"><span
                                             class="fa-solid fa-right-from-bracket"></span>Deslogar</a></li>
                             </ul>
                         </nav>
@@ -93,9 +93,9 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
             </div>
         </div>
         <!-- Fim da navegação mobile -->
-    <!-- Fim da navegação de perfil -->
+        <!-- Fim da navegação de perfil -->
 
-    <!-- Configuração do perfil -->
+        <!-- Configuração do perfil -->
         <div class="dashboard-content-details">
             <h1>Configurar perfil</h1>
             <p>Edite as suas informações de perfil</p>
@@ -105,14 +105,15 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label for="nome-input" class="form-label">Nome</label>
-                            <input type="text" id="nome-input" class="form-control" value="<?php echo @$linhausuario['nome']; ?>" name="nome">
+                            <input type="text" id="nome-input" class="form-control"
+                                value="<?php echo @$linhausuario['nome']; ?>" name="nome">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label for="sobrenome-input" class="form-label">Sobrenome</label>
                             <input type="text" id="sobrenome-input" class="form-control"
-                            value="<?php echo @$linhausuario['sobrenome']; ?>" name="sobrenome">
+                                value="<?php echo @$linhausuario['sobrenome']; ?>" name="sobrenome">
                         </div>
                     </div>
                 </div>
@@ -122,13 +123,14 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
                         <div class="mb-3">
                             <label for="cpf-input" class="form-label">CPF</label>
                             <input type="text" id="cpf-input" name="cpf" class="form-control"
-                            value="<?php echo @$linhausuario['cpf']; ?>">
+                                value="<?php echo @$linhausuario['cpf']; ?>">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label for="tel-input" class="form-label">Telefone</label>
-                            <input type="text" id="tel-input" class="form-control" value="<?php echo @$linhausuario['telefone']; ?>" name="telefone">
+                            <input type="text" id="tel-input" class="form-control"
+                                value="<?php echo @$linhausuario['telefone']; ?>" name="telefone">
                         </div>
                     </div>
                 </div>
@@ -138,7 +140,8 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
                         <div class="mb-3">
                             <label for="cep-input" class="form-label">CEP</label>
                             <div class="d-flex cep-botao">
-                                <input type="text" id="cep-input" class="form-control" value="<?php echo @$linhausuario['cep']; ?>" name="cep">
+                                <input type="text" id="cep-input" class="form-control"
+                                    value="<?php echo @$linhausuario['cep']; ?>" name="cep">
                                 <button type="button" onclick="buscarEndereco()">Buscar</button>
                             </div>
                         </div>
@@ -147,7 +150,7 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
                         <div class="mb-3">
                             <label for="logradouro-input" class="form-label">Logradouro</label>
                             <input type="text" id="logradouro-input" class="form-control"
-                            value="<?php echo @$linhausuario['logradouro']; ?>" name="logradouro">
+                                value="<?php echo @$linhausuario['logradouro']; ?>" name="logradouro">
                         </div>
                     </div>
                 </div>
@@ -156,13 +159,15 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label for="company-new-password" class="form-label">Estado</label>
-                            <input type="text" id="estado-input" class="form-control" value="<?php echo @$linhausuario['estado']; ?>" name="estado">
+                            <input type="text" id="estado-input" class="form-control"
+                                value="<?php echo @$linhausuario['estado']; ?>" name="estado">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label for="company-new-password-repeat" class="form-label">Cidade</label>
-                            <input type="text" id="cidade-input" class="form-control" value="<?php echo @$linhausuario['cidade']; ?>" name="cidade">
+                            <input type="text" id="cidade-input" class="form-control"
+                                value="<?php echo @$linhausuario['cidade']; ?>" name="cidade">
                         </div>
                     </div>
                 </div>
@@ -170,13 +175,15 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label for="company-new-password" class="form-label">Bairro</label>
-                            <input type="text" id="bairro-input" class="form-control" value="<?php echo @$linhausuario['bairro']; ?>" name="bairro">
+                            <input type="text" id="bairro-input" class="form-control"
+                                value="<?php echo @$linhausuario['bairro']; ?>" name="bairro">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label for="company-new-password-repeat" class="form-label">Número da casa</label>
-                            <input type="text" id="numero-input" class="form-control" value="<?php echo @$linhausuario['numero']; ?>" name="numero">
+                            <input type="text" id="numero-input" class="form-control"
+                                value="<?php echo @$linhausuario['numero']; ?>" name="numero">
                         </div>
                     </div>
                 </div>
@@ -195,6 +202,7 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/pgprincipal.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         $(document).ready(function () {
             // mascara de cpf, cep e telefone
@@ -226,6 +234,22 @@ $linhausuario = $tbusuario->fetch(PDO::FETCH_BOTH);
                     alert('Ocorreu um erro ao buscar o endereço.');
                     console.log(error);
                 });
+        }
+
+        function sair() {
+            Swal.fire({
+                title: 'Você tem certeza que deseja sair?',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim, quero sair',
+                cancelButtonText:'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "logout.php";
+                }
+            })
         }
     </script>
 </body>

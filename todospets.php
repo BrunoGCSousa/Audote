@@ -4,7 +4,7 @@ include('config.php');
 
 // código para definir o tamanho da página e o limite de cards em cada página e de pesquisar o animal
 $pagina = 1;
-$limite = 3;
+$limite = 9;
 
 if(isset($_GET['pagina'])){
     $pagina = filter_input(INPUT_GET, "pagina", FILTER_VALIDATE_INT);
@@ -80,35 +80,6 @@ if (!empty($_GET['search'])) {
     <section class="mt-100 px-5">
     <?php include('./secoes/nav.php') ?>
 
-        <!-- <h1>Vamos adotar ?</h1>
-        <label>Espécie</label>
-        <select id="especie">
-
-            <option value="">Selecione</option>
-            <option value="cachorro">Cachorro</option>
-            <option value="gato">Gato</option>
-
-        </select>
-
-        <label>Sexo</label>
-        <select id="sexo">
-
-            <option value="">Selecione</option>
-            <option value="macho">Macho</option>
-            <option value="femea">Fêmea</option>
-
-        </select>
-
-        <label>Porte</label>
-        <select id="porte">
-
-            <option value="">Selecione</option>
-            <option value="grande">Grande</option>
-            <option value="medio">Medio</option>
-            <option value="pequeno">Pequeno</option>
-
-        </select> -->
-
         <div class="">
             <div class="candidates-list-top mb-5">
                 <div class="row justify-content-between align-items-center">
@@ -138,17 +109,20 @@ if (!empty($_GET['search'])) {
                     <?php
                     $stmt = $pdo->prepare($sql); // prepara o codigo sql
                     $stmt->execute(); // executa e seleciona todos os dados da tabela pets
-                    
-                    while ($row = $stmt->fetch(PDO::FETCH_BOTH)) { // cria um loop que roda todos os dados da tabela e traz eles em formato de matriz
-                    
+
+                    if ($stmt ->rowCount() == 0) {
+                        echo "<div class='text-center'> <h2>Poxa, Não encontramos nenhum pet com esse filtro =( </h2> </div>";
+                    } else {
+                        while ($row = $stmt->fetch(PDO::FETCH_BOTH)) { // cria um loop que roda todos os dados da tabela e traz eles em formato de matriz
+                            
                         echo "
                         <div class='pet col-3' style=" . "--imagem-fundo:url('../../$row[10]');" . ">
-                        <div class='preto'></div>
-                        <div class='descricao'>
-                            <h2>$row[1]</h2>
-                            <h3>$row[2] $row[6] | $row[3]</h3>
-                            <div class='oculto'>
-                                <h4>Idade: $row[4] anos <br>
+                            <div class='preto'></div>
+                            <div class='descricao'>
+                                <h2>$row[1]</h2>
+                                <h3>$row[2] $row[6] | $row[3]</h3>
+                                <div class='oculto'>
+                                    <h4>Idade: $row[4] anos <br>
                                     Tamanho: $row[5] <br>
                                     Sexo: $row[6]</h4>
                                     <p>$row[7]</p>
@@ -157,12 +131,13 @@ if (!empty($_GET['search'])) {
                                         <li>$row[9]</li>
                                     </ul>
                                     <h4><a href='pet.php?idPet=$row[0]'>Adote já</a></h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    ";
-
-                    }
+                                    ";
+                                    
+                                }
+                            }
                     ?>
                 </div>
             </div>

@@ -1,0 +1,32 @@
+.accordion-item {
+    border: 0 !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black !important;
+    background-color: #fff !important;
+    box-shadow: none;
+}
+.accordion-button:focus {
+    border-color: none ;
+    box-shadow: none;
+}
+
+.subtitulo {
+    background-color: #fff;
+    padding: 10px;
+    width: fit-content;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.doacao {
+    transition: 1s;
+    border-radius: 30px;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.doacao:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

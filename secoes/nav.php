@@ -38,19 +38,19 @@
                                         ?>
                                     </li>
                                     <li class="nav-item">
-                                        <a role="button" class="nav-link" href="#">Inicio</a>
+                                        <a role="button" class="nav-link" href="index.php">Inicio</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a role="button" class="nav-link" href="#">Quero adotar</a>
+                                        <a role="button" class="nav-link" href="todospets.php">Quero adotar</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a role="button" class="nav-link" href="#">Quero ajudar</a>
+                                        <a role="button" class="nav-link" href="doacoes.php">Quero ajudar</a>
                                     </li>
                                     <li class="nav-item">
                                         <a role="button" class="nav-link" href="#">Parcerias</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a role="button" class="nav-link" href="#">Quem somos</a>
+                                        <a role="button" class="nav-link" href="quemSomos.php">Quem somos</a>
                                     </li>
                                     <li class="nav-item">
                                         <?php
@@ -86,26 +86,26 @@
                                 } else {
                                     echo "
                                 <li class='nav-item'>
-                                    <a role='button' href='#'>Quero ajudar</a>
+                                    <a role='button' href='doacoes.php'>Quero ajudar</a>
                                 </li>
                                 <li class='nav-item'>
                                     <a role='button' href='#'>Parcerias</a>
                                 </li>
                                 <li class='nav-item'>
-                                    <a role='button' href=''#'>Quem somos</a>
+                                    <a role='button' href='quemSomos.php'>Quem somos</a>
                                 </li>
                                     ";
                                 }
                             }else {
                                 echo "
                                 <li class='nav-item'>
-                                    <a role='button' href='#'>Quero ajudar</a>
+                                    <a role='button' href='doacoes.php'>Quero ajudar</a>
                                 </li>
                                 <li class='nav-item'>
                                     <a role='button' href='#'>Parcerias</a>
                                 </li>
                                 <li class='nav-item'>
-                                    <a role='button' href=''#'>Quem somos</a>
+                                    <a role='button' href='quemSomos.php'>Quem somos</a>
                                 </li>
                                     ";
                                 }

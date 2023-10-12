@@ -20,7 +20,7 @@ include('config.php');
 </head>
 
 <body style="background-color: var(--MainColorLight);">
-<!-- Menu perfil -->
+    <!-- Menu perfil -->
     <div class="dashboard-side-panel d-none d-lg-block">
         <div class="logo">
             <a href="index.php"><span style="color: var(--MainColor)">Audote</span></a>
@@ -29,7 +29,7 @@ include('config.php');
         <nav class="mt-3 mt-lg-4 d-flex justify-content-between flex-column pb-100">
             <div class="dashboard-side-label">Ferramentas administrativas</div>
             <ul class="list-unstyled">
-            <li><a href="index.php"><span class="fa fa-home"></span>Inicio</a></li>
+                <li><a href="index.php"><span class="fa fa-home"></span>Inicio</a></li>
                 <li><a href="perfil.php"><span class="fa fa-pencil"></span>Editar Perfil</a></li>
                 <?php
                 if ($_SESSION["tipoConta"] === 'admin') {
@@ -40,7 +40,7 @@ include('config.php');
                 }
                 ?>
                 <li><a href="mudarSenha.php"><span class="fa fa-lock"></span>Mudar a senha</a></li>
-                <li><a href="logout.php"><span class="fa-solid fa-right-from-bracket"></span>Deslogar</a></li>
+                <li><a href="#" onclick="sair()"><span class="fa-solid fa-right-from-bracket"></span>Deslogar</a></li>
             </ul>
         </nav>
     </div>
@@ -76,8 +76,10 @@ include('config.php');
                                         ";
                                 }
                                 ?>
-                                <li class="nav-item"><a href="mudarSenha.php"><span class="fa fa-lock"></span>Mudar a senha</a></li>
-                                <li class="nav-item"><a href="logout.php"><span class="fa-solid fa-right-from-bracket"></span>Deslogar</a></li>
+                                <li class="nav-item"><a href="mudarSenha.php"><span class="fa fa-lock"></span>Mudar a
+                                        senha</a></li>
+                                <li class="nav-item"><a href="#" onclick="sair()"><span
+                                            class="fa-solid fa-right-from-bracket"></span>Deslogar</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -85,9 +87,9 @@ include('config.php');
             </div>
 
         </div>
-<!-- Fim menu perfil -->
+        <!-- Fim menu perfil -->
 
-<!-- Inicio da sessão pra gerenciar os pets -->
+        <!-- Inicio da sessão pra gerenciar os pets -->
 
         <div class="dashboard-content-details">
 
@@ -142,7 +144,7 @@ include('config.php');
                 </table>
             </div>
         </div>
-<!-- Fim da sessão pra gerenciar os pets -->
+        <!-- Fim da sessão pra gerenciar os pets -->
 
     </div>
 
@@ -150,6 +152,24 @@ include('config.php');
     <script src="src/js/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/pgprincipal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function sair() {
+            Swal.fire({
+                title: 'Você tem certeza que deseja sair?',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim, quero sair',
+                cancelButtonText:'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "logout.php";
+                }
+            })
+        }
+    </script>
 </body>
 
 </html>

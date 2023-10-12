@@ -69,7 +69,7 @@ include('config.php');
                                             <a role="button" class="nav-link" href="doacoes.php">Quero ajudar</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a role="button" class="nav-link" href="parcerias.php">Parcerias</a>
+                                            <a role="button" class="nav-link" href="#">Parcerias</a>
                                         </li>
                                         <li class="nav-item">
                                             <a role="button" class="nav-link" href="quemSomos.php">Quem somos</a>
@@ -84,12 +84,19 @@ include('config.php');
                                                     ";
                                                 }
                                             }
-                                            
+
                                             ?>
                                         </li>
-                                        <li class="nav-item">
-                                            <a role="button" class="nav-link" href="logout.php">Sair</a>
-                                        </li>
+                                        <?php
+
+                                        if (!empty($_SESSION["id"])) {
+                                            echo "
+                                                <li class='nav-item'>
+                                                <a role='button' class='nav-link' href='#' onclick='sair()'>Sair</a>
+                                                </li>
+                                            ";
+                                        }
+                                        ?>
                                     </ul>
                                 </nav>
                             </div>
@@ -100,8 +107,7 @@ include('config.php');
                     <div class="hero-form hero-form-round">
                         <form class="row gx-3 align-items-center" action="todospets.php">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="Pesquisar pets..."
-                                    name="search" />
+                                <input type="text" class="form-control" placeholder="Pesquisar pets..." name="search" />
                             </div>
                             <div class="col-auto">
                                 <button>
@@ -403,18 +409,36 @@ include('config.php');
                         <span class="copyright-text">Copyright © 2023
                             <a href="#" target="_blank">AUDOTE</a>. Todos
                             direitos Reservados.</span>
-                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Fim do rodapé de baixo -->
-        </footer>
-        <!-- Fim do rodapé -->
+        </div>
+        <!-- Fim do rodapé de baixo -->
+    </footer>
+    <!-- Fim do rodapé -->
 
     <script src="src/js/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/pgprincipal.js"></script>
     <script src="src/js/multi-animated-counter.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function sair() {
+            Swal.fire({
+                title: 'Você tem certeza que deseja sair?',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim, quero sair',
+                cancelButtonText:'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = "logout.php";
+                }
+            })
+        }
+    </script>
 </body>
 
 </html>
