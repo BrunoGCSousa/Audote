@@ -3631,3 +3631,20 @@ footer .copyright-text {
         padding: 10px 20px;
     }
 }
+
+.btn-gerenciar {
+    background-color: var(--MainColor);
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 15px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.btn-gerenciar:hover {
+    color: #fff;
+    transform: scale(1.1);
+    opacity: 80%;
+}

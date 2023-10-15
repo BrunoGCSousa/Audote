@@ -134,8 +134,8 @@ include('config.php');
                             echo "<td> <img src='$row[imagemPet]'> </td>";
                             echo "<td> $row[caracteristicas] </td>";
                             echo "<td> 
-                            <a href='removerPet.php?idPet=$row[0]'><i class='fa-solid fa-trash'></i></a>
-                            <a href='editarpets.php?idPet=$row[0]'><i class='fa-solid fa-pencil'></i></a>
+                            <a href='removerPet.php?idPet=$row[0]' class='btn-gerenciar' title='Excluir pet'><i class='fa-solid fa-trash'></i></a>
+                            <a href='editarpets.php?idPet=$row[0]' class='btn-gerenciar' title='Editar pet'><i class='fa-solid fa-pencil'></i></a>
                           </td>"; // com o código ?idPet=$row[0] armazena no campo $_GET['idPet'] o valor da variavel $row[0] sendo possivel assim colocar esse valor em outras páginas
                             echo "</tr>";
                         }
